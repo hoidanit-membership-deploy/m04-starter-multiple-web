@@ -47,7 +47,7 @@ services:
     restart: unless-stopped
 
   frontend-blog:
-    image: hoidanitreal/deploy-m04-starter-multiple-web-react
+    image: hoidanitreal/deploy-m04-starter-multiple-web-vue
     container_name: frontend-blog-vue
     restart: unless-stopped
 
