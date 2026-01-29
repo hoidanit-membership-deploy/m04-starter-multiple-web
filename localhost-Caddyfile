@@ -1,0 +1,35 @@
+
+# Main landing page (Angular) - localhost
+localhost:80 {
+    reverse_proxy frontend-main:80
+
+    # Backend API
+    handle /api/* {
+        reverse_proxy backend:3000
+    }
+
+    log {
+        output stdout
+        format console
+    }
+}
+
+# Blog (Vue.js) - localhost:8081
+localhost:8081 {
+    reverse_proxy frontend-blog:80
+
+    log {
+        output stdout
+        format console
+    }
+}
+
+# CV/Portfolio (React) - localhost:8082
+localhost:8082 {
+    reverse_proxy frontend-cv:80
+
+    log {
+        output stdout
+        format console
+    }
+}
