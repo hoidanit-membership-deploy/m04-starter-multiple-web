@@ -19,7 +19,7 @@
     }
 
     log {
-        output file /var/log/caddy/main.log
+        output stdout
         format json
     }
 }
@@ -44,7 +44,7 @@ blog.{$DOMAIN} {
     }
 
     log {
-        output file /var/log/caddy/blog.log
+        output stdout
         format json
     }
 }
@@ -64,7 +64,7 @@ cv.{$DOMAIN} {
     }
 
     log {
-        output file /var/log/caddy/cv.log
+        output stdout
         format json
     }
 }
